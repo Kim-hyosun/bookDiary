@@ -1,0 +1,16 @@
+.query{
+  .title {
+    display: flex; align-items: center; padding:16px 10px 14px; border-bottom: #ddd 1px solid;
+      li{ font-size:18px; margin-right: 10px;
+        svg{width:34px; height:34px;padding-top:6px;}
+      }
+  }
+  .querybar{
+    background-color: #ddd; width:90%; margin:20px auto; border-radius: 6px;
+       input{ border:none; width:100%; padding: 10px 34px; background-color: transparent; background: url('../../assets/images/icon_query.png') no-repeat 2% 56%/contain; background-size: 5%; outline: none;}
+  }
+
+ .result{
+  height:calc(100vh - 220px);
+ }
+}
