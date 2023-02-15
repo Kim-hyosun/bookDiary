@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/bookDiary/static/js/main.b144324e.js",
+    "index.html": "/bookDiary/index.html",
+    "main.b144324e.js.map": "/bookDiary/static/js/main.b144324e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b144324e.js"
+  ]
+}
