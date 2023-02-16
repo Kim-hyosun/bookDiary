@@ -1,39 +1,41 @@
-import { NavLink, Route, Routes } from "../../node_modules/react-router-dom/dist/index";
-import ListAll from "../components/ListAll";
-import ListReading from "../components/ListReading";
-import ListRed from "../components/ListRed";
-import ListWanna from "../components/ListWanna";
+import { useState } from "react";
+
+ import ListAll from "../components/ListAll";
+ import ListReading from "../components/ListReading";
+ import ListRed from "../components/ListRed";
+ import ListWanna from "../components/ListWanna";
 import "./style/library.scss"
 
 function Library() {
+
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const tabActiveHandler = (idx) => {
+    setActiveIdx(idx);
+  }
+
   const libdata = [
-  {id:1, url:"/lib", content:`전체`},
-  {id:2, url:"/lib/red", content:`읽은 책`},
-  {id:3, url:"/lib/reading", content:`읽고 있는 책`},
-  {id:4, url:"/lib/wanna", content:`읽고 싶은 책`},
-]
+  {title:(<li key="1" className={activeIdx ===0 ? "active" : ""} onClick={()=>tabActiveHandler(0)}>전체</li>), content:(<ListAll />)},
+  {title:(<li key="2" className={activeIdx ===1 ? "active" : ""} onClick={()=>tabActiveHandler(1)}>읽은 책</li>), content:(<ListRed />)},
+  {title:(<li key="3" className={activeIdx ===2 ? "active" : ""} onClick={()=>tabActiveHandler(2)}>읽고 있는 책</li>), content:(<ListReading />)},
+  {title:(<li key="4" className={activeIdx ===3 ? "active" : ""} onClick={()=>tabActiveHandler(3)}>읽고 싶은 책</li>), content:(<ListWanna />)},
+  ]
+ 
 
   return (
     <div className="lib">
       <h2>나의 서재</h2>
       <ul className="libNav">
       {
-          libdata.map((item) => <li key={item.id}>
-                              <NavLink to={item.url} activeclassname="active">{item.content}</NavLink>
-                             </li>
-                  )
-        }
+           libdata.map((item) => {
+             return item.title
+           })
+      }
       </ul>
       <div className="showlibList">
-       
-        <Routes>
-          <Route index element={<ListAll />} />
-          <Route path="/lib/red" element={<ListRed />} />
-          <Route path="/lib/reading" element={<ListReading />} />
-          <Route path="/lib/wanna" element={<ListWanna />} />
-        </Routes>
-        
-       
+        {
+           libdata[activeIdx].content
+        }
 
       </div>
 

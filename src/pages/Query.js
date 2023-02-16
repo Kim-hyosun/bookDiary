@@ -1,8 +1,55 @@
+import { useEffect, useState } from "react";
 import { Link } from "../../node_modules/react-router-dom/dist/index";
+import { bookSearch } from "../assets/index";
+import QueryList from "../components/QueryList";
 import Home from "./Home";
 import "./style/query.scss"
 
 function Query() {
+  const [keyword, setKeyword] = useState("");
+  const [books, setBooks] = useState([]);
+  
+  const onChangeSearch = (e) => {
+    const {value} = e.target;
+    e.preventDefault();
+    setKeyword(value);
+  }
+
+  useEffect(() => {
+    if (keyword !== null) {
+      bookSearchHandler(keyword, true);
+
+    }else{
+      bookSearchHandler(keyword, false);
+    }
+  }, [keyword]);
+
+  const bookSearchHandler = async (query, reset) => {
+    const params = {
+      query: query,
+      sort: 'accuracy',
+      page: 1,
+      size: 20,
+    };
+    
+    const { data } = await bookSearch(params);
+    console.log(data.documents)
+     if (reset) {
+        setBooks(data.documents);
+       
+     } else {
+        setBooks([])
+     }
+
+  }
+
+ 
+  const onSearch = (e) => {
+    //  e.preventDefault();
+    //  const {value} = e.target;
+    //  setKeyword(value);
+  }
+
   return (
     <div className="query">
       <ul className="title">
@@ -14,11 +61,14 @@ function Query() {
         <li>책 검색하기</li>
       </ul>
 
-      <div className="querybar">
-        <input type="text" placeholder="어떤 책을 읽으셨나요?" />
-      </div>
+      <form className="querybar" onSubmit={(e)=>onSearch(e)}>
+        <input type="text" placeholder="어떤 책을 읽으셨나요?" onChange={onChangeSearch} value={keyword} />
+        <button type="submit">검색</button>
+      </form>
       
-      <div className="result">검색결과 표기 예정</div>
+      <div className="result"  style={keyword === "" ? { height: `calc(100vh - 220px)` } : {height:`auto`}}>
+        <QueryList books={books} />
+      </div>
     </div>
   );
 }

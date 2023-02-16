@@ -1,7 +1,7 @@
 nav{
   ul{
-    display: grid; grid-template-columns: repeat(5, 1fr); border-top:#ddd 1px solid; padding:10px 0;
-    li a{ text-align:center;
+    display: grid; grid-template-columns: repeat(5, 1fr); border-top:#ddd 1px solid; padding:10px 0;background-color: #fff; position:relative; z-index: 99;
+    li a{ text-align:center; 
       svg{width:30px; height:30px; fill:#777;}
       span{display: none; color:#777;}
     }
