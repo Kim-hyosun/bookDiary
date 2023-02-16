@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bookDiary/static/css/main.c521df07.css",
-    "main.js": "/bookDiary/static/js/main.c8ddfa3c.js",
+    "main.css": "/bookDiary/static/css/main.8141094a.css",
+    "main.js": "/bookDiary/static/js/main.02508d32.js",
     "static/media/PretendardVariable.woff2": "/bookDiary/static/media/PretendardVariable.36b3a87cd98126711b2b.woff2",
     "index.html": "/bookDiary/index.html",
-    "main.c521df07.css.map": "/bookDiary/static/css/main.c521df07.css.map",
-    "main.c8ddfa3c.js.map": "/bookDiary/static/js/main.c8ddfa3c.js.map"
+    "main.8141094a.css.map": "/bookDiary/static/css/main.8141094a.css.map",
+    "main.02508d32.js.map": "/bookDiary/static/js/main.02508d32.js.map"
   },
   "entrypoints": [
-    "static/css/main.c521df07.css",
-    "static/js/main.c8ddfa3c.js"
+    "static/css/main.8141094a.css",
+    "static/js/main.02508d32.js"
   ]
 }
