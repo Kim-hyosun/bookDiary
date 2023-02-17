@@ -1,7 +1,7 @@
 
 function ListRed() {
   return (
-    <div>
+    <div style={{minHeight:'calc(100vh - 190px)'}}>
       읽은 책
     </div>
   );

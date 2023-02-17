@@ -1,7 +1,7 @@
 
 function ListAll() {
   return (
-    <div>
+    <div style={{minHeight:'calc(100vh - 190px)'}}>
       전체
     </div>
   );

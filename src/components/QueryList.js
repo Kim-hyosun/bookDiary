@@ -1,12 +1,16 @@
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 import QueryDetail from "./QueryDetail";
 
-function QueryList({books}) {
+
+
+function QueryList({ books }) {
+ 
   return (
     
     <ul>
       {
-        books.map((item, idx) => <li key={idx}><Link to="/bookDiary/query/detail" element={<QueryDetail item={item} />}>
+        books.map((item, idx) => <li key={item.isbn + idx}>
+          <Link to={`/bookDiary/query/${item.title}`} element={<QueryDetail />}>
         <div className="imgWrap"><img src={item.thumbnail} alt={item.title} /></div>
           <div className="txt">
             <h4>{item.title}</h4>

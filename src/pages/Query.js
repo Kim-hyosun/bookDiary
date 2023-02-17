@@ -5,9 +5,10 @@ import QueryList from "../components/QueryList";
 import Home from "./Home";
 import "./style/query.scss"
 
-function Query() {
+function Query() {  
   const [keyword, setKeyword] = useState("");
   const [books, setBooks] = useState([]);
+  // const [resets, setReset] = useState(false);
   
   const onChangeSearch = (e) => {
     const {value} = e.target;
@@ -16,39 +17,42 @@ function Query() {
   }
 
   useEffect(() => {
-    if (keyword !== null) {
-      bookSearchHandler(keyword, true);
-
-    }else{
+     if (keyword !== null) {
+       bookSearchHandler(keyword, true)
+     }else{
       bookSearchHandler(keyword, false);
-    }
+     }
   }, [keyword]);
 
-  const bookSearchHandler = async (query, reset) => {
+const bookSearchHandler = async (query, resets) => {
     const params = {
       query: query,
       sort: 'accuracy',
       page: 1,
       size: 20,
     };
-    
+
     const { data } = await bookSearch(params);
-    console.log(data.documents)
-     if (reset) {
-        setBooks(data.documents);
-       
-     } else {
-        setBooks([])
-     }
+    // console.log(data.documents);
+    if (resets === true) {
+      setBooks(data.documents);
+    } else {
+      setBooks([]);
+    }
 
   }
 
  
-  const onSearch = (e) => {
-    //  e.preventDefault();
-    //  const {value} = e.target;
-    //  setKeyword(value);
-  }
+  // const onSearch = (e) => {
+  //   e.preventDefault();
+  //   setReset(true);
+  // }
+
+   const onReset = (e) => {
+     e.preventDefault();
+    //  setReset(false);
+     setKeyword("");
+   }
 
   return (
     <div className="query">
@@ -61,12 +65,14 @@ function Query() {
         <li>책 검색하기</li>
       </ul>
 
-      <form className="querybar" onSubmit={(e)=>onSearch(e)}>
+      <form className="querybar">
         <input type="text" placeholder="어떤 책을 읽으셨나요?" onChange={onChangeSearch} value={keyword} />
-        <button type="submit">검색</button>
+
+        <button type="reset" onClick={(e)=>onReset(e)}>x</button>
+        {/* <button type="submit" onClick={(e)=>onSearch(e)}>검색</button> */}
       </form>
       
-      <div className="result"  style={keyword === "" ? { height: `calc(100vh - 220px)` } : {height:`auto`}}>
+      <div className="result" style={keyword === "" ? { minHeight: `calc(100vh - 220px)` } : { minHeight: `calc(100vh - 220px)`, height:`auto`}}>
         <QueryList books={books} />
       </div>
     </div>
