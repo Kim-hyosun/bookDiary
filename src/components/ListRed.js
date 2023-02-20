@@ -4,7 +4,7 @@ function ListRed() {
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>
       {
-REDlist == null ? <h4>리스트가 비어있습니다.</h4> :
+REDlist == null ? <h5>리스트가 비어있습니다.</h5> :
           (
             <ul>
               {

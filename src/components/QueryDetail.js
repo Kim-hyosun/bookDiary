@@ -39,11 +39,14 @@ function QueryDetail() {
     }
 
   }
-
+  //  console.log(thisbook.title);
+  //  console.log(REDlist[0].title);
 
  const addREDlist = (thisbook) => {
    let REDlist = JSON.parse(localStorage.getItem("REDlist")) || [];
+
    REDlist.push(thisbook);
+
    localStorage.setItem("REDlist", JSON.stringify(REDlist));
   }
 

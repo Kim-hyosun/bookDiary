@@ -4,7 +4,7 @@ function ListReading() {
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>
       {
-        READINGlist == null ? <h4> 리스트가 비어있습니다. </h4> : (
+        READINGlist == null ? <h5> 리스트가 비어있습니다. </h5> : (
       <ul>
         {
           READINGlist.map((item, idx) => <li key={item.isbn + idx}>

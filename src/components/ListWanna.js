@@ -4,7 +4,7 @@ function ListWanna() {
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>{
 
-      WANNAlist == null ? <h4>리스트가 비어있습니다.</h4> : 
+      WANNAlist == null ? <h5>리스트가 비어있습니다.</h5> : 
      ( <ul>
         {
           WANNAlist.map((item, idx) => <li key={item.isbn + idx}>
