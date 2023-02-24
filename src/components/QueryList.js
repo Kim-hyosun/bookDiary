@@ -10,7 +10,7 @@ function QueryList({ books }) {
     <ul>
       {
         books.map((item, idx) => <li key={item.isbn + idx}>
-          <Link to={`/bookDiary/query/${item.title}`} element={<QueryDetail />}>
+          <Link to={`/book/query/${item.title}`} element={<QueryDetail />}>
             <div className="imgWrap"><img src={item.thumbnail} alt={item.title} /></div>
             <div className="txt">
               <h4>{item.title}</h4>

@@ -16,10 +16,10 @@ function App() {
     <>
       <Globalstyle />
       <Routes>
-        <Route path="/bookDiary">
+        <Route path="/book">
           <Route index element={<Home />} />
-          <Route path="/bookDiary/query" element={<Query />} />
-          <Route path="/bookDiary/query/:itemID" element={<QueryDetail />} />
+          <Route path="/book/query" element={<Query />} />
+          <Route path="/book/query/:itemID" element={<QueryDetail />} />
         </Route>
 
         <Route path="/lib" element={<Library />} />

@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="home">
       <div className="query">
-        <Link to="/bookDiary/query" element={<Query />} className="goQuery"><span>책 검색하기</span></Link>
+        <Link to="/book/query" element={<Query />} className="goQuery"><span>책 검색하기</span></Link>
       </div>
 
       <Mybooklist />
