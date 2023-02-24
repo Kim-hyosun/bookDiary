@@ -5,26 +5,26 @@ import QueryList from "../components/QueryList";
 import Home from "./Home";
 import "./style/query.scss"
 
-function Query() {  
+function Query() {
   const [keyword, setKeyword] = useState("");
   const [books, setBooks] = useState([]);
   // const [resets, setReset] = useState(false);
-  
+
   const onChangeSearch = (e) => {
-    const {value} = e.target;
+    const { value } = e.target;
     e.preventDefault();
     setKeyword(value);
   }
 
   useEffect(() => {
-     if (keyword !== null) {
-       bookSearchHandler(keyword, true)
-     }else{
+    if (keyword !== null) {
+      bookSearchHandler(keyword, true)
+    } else {
       bookSearchHandler(keyword, false);
-     }
+    }
   }, [keyword]);
 
-const bookSearchHandler = async (query, resets) => {
+  const bookSearchHandler = async (query, resets) => {
     const params = {
       query: query,
       sort: 'accuracy',
@@ -42,17 +42,17 @@ const bookSearchHandler = async (query, resets) => {
 
   }
 
- 
+
   // const onSearch = (e) => {
   //   e.preventDefault();
   //   setReset(true);
   // }
 
-   const onReset = (e) => {
-     e.preventDefault();
+  const onReset = (e) => {
+    e.preventDefault();
     //  setReset(false);
-     setKeyword("");
-   }
+    setKeyword("");
+  }
 
   return (
     <div className="query">
@@ -68,11 +68,11 @@ const bookSearchHandler = async (query, resets) => {
       <form className="querybar">
         <input type="text" placeholder="어떤 책을 읽으셨나요?" onChange={onChangeSearch} value={keyword} />
 
-        <button type="reset" onClick={(e)=>onReset(e)}>x</button>
+        <button type="reset" onClick={(e) => onReset(e)}>x</button>
         {/* <button type="submit" onClick={(e)=>onSearch(e)}>검색</button> */}
       </form>
-      
-      <div className="result" style={keyword === "" ? { minHeight: `calc(100vh - 220px)` } : { minHeight: `calc(100vh - 220px)`, height:`auto`}}>
+
+      <div className="result" style={keyword === "" ? { minHeight: `calc(100vh - 220px)` } : { minHeight: `calc(100vh - 220px)`, height: `auto` }}>
         <QueryList books={books} />
       </div>
     </div>

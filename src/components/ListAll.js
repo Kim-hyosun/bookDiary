@@ -1,9 +1,9 @@
 
 function ListAll() {
- let REDlist = JSON.parse(localStorage.getItem("REDlist"))
+  let REDlist = JSON.parse(localStorage.getItem("REDlist"))
 
   return (
-    <div style={{ minHeight: 'calc(100vh - 190px)' }}>
+    <div style={{ minHeight: 'calc(100vh - 200px)' }}>
       {
         REDlist == null ? <h5>리스트가 비어있습니다.</h5> :
           (

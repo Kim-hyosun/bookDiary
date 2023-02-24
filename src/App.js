@@ -18,9 +18,8 @@ function App() {
       <Routes>
         <Route path="/bookDiary">
           <Route index element={<Home />} />
-          <Route path=":query" element={<Query />} />
+          <Route path="/bookDiary/query" element={<Query />} />
           <Route path="/bookDiary/query/:itemID" element={<QueryDetail />} />
-          
         </Route>
 
         <Route path="/lib" element={<Library />} />
