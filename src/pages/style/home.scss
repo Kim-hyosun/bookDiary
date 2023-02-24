@@ -36,7 +36,13 @@
     }
 
     .showlist {
-      min-height: calc(100vh - 181px);
+      min-height: calc(100vh - 200px);
+
+      h5 {
+        text-align: center;
+        margin-top: 10px;
+      }
+
     }
 
     ul {
@@ -48,8 +54,9 @@
       gap: 5%;
 
       li {
+
         .imgWrap {
-          border: 1px solid #ddd;
+          box-shadow: 2px 2px 7px #ddd;
           border-radius: 12px;
 
           img {

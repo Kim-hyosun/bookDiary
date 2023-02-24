@@ -2,7 +2,7 @@
 function ListWanna() {
   let WANNAlist = JSON.parse(localStorage.getItem("WANNAlist"))
   return (
-    <div style={{ minHeight: 'calc(100vh - 200px)' }}>{
+    <div style={{ minHeight: 'calc(100vh - 190px)' }}>{
 
       WANNAlist == null ? <h5>리스트가 비어있습니다.</h5> :
         (<ul>
