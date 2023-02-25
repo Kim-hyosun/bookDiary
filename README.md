@@ -29,12 +29,14 @@
 ---
 
 ### 폴더 구성
+<img width="209" alt="2_1" src="https://user-images.githubusercontent.com/113571272/221362677-5fbd1303-ae24-40b1-9283-d6eec52f8218.png">
 
-![](./src/assets/images/readmeIMG/2_1.png)
+
 
 ### 세부 Component 구성
+<img width="213" alt="2_2" src="https://user-images.githubusercontent.com/113571272/221362689-8b0c12a6-0ea4-4b8e-a5fd-7273684f884c.png">
 
-![](./src/assets/images/readmeIMG/2_2.png)
+
 
 # 3.  사용 기술
 
@@ -51,24 +53,25 @@
 ## 홈 화면 -  검색 - 상세페이지로 이동 - 서재(3가지 리스트)에 나눠 저장가능
 
 홈화면
-
-![](./src/assets/images/readmeIMG/4_1.png)
+<img width="610" alt="4_1" src="https://user-images.githubusercontent.com/113571272/221362705-24db9bb1-632a-4185-8774-b9b7609fd513.png">
 
 검색
-
-![](./src/assets/images/readmeIMG/4_2.png)
+<img width="506" alt="4_2" src="https://user-images.githubusercontent.com/113571272/221362730-7d6f94d8-a741-474e-bd5c-bbb588e84409.png">
 
 상세페이지
+<img width="374" alt="4_3" src="https://user-images.githubusercontent.com/113571272/221362740-e3f09d11-36e2-41a4-b851-6e37e9c4dafc.png">
 
-![](./src/assets/images/readmeIMG/4_3.png)
 
 ## 상세페이지에서 저장한 정보를 서재에서 보여줌
+<img width="427" alt="4_4" src="https://user-images.githubusercontent.com/113571272/221362765-023ac78d-64b5-4faf-99fb-31021149598a.png">
 
-![](./src/assets/images/readmeIMG/4_4.png)
 
-![](./src/assets/images/readmeIMG/4_5.png)
+<img width="438" alt="4_5" src="https://user-images.githubusercontent.com/113571272/221362769-207deb31-e9a6-45d0-a6eb-d6a5cf07ffb5.png">
 
-![](./src/assets/images/readmeIMG/4_6.png)
+
+<img width="378" alt="4_6" src="https://user-images.githubusercontent.com/113571272/221362776-af475724-94f9-4152-a982-df843805b274.png">
+
+
 
 # 5.  문제 및 해결 과정
 
