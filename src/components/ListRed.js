@@ -1,6 +1,12 @@
 
 function ListRed() {
-  let REDlist = JSON.parse(localStorage.getItem("REDlist"))
+  let REDlist = JSON.parse(localStorage.getItem("REDlist"));
+
+  const delItem = (item) => {
+    let REDlist = JSON.parse(localStorage.getItem("REDlist")) || [];
+    REDlist = REDlist.filter(el => el.title !== item.title && el !== undefined && el !== null);
+    localStorage.setItem("REDlist", JSON.stringify(REDlist));
+  }
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>
       {
@@ -14,6 +20,7 @@ function ListRed() {
                     <h4>{item.title}</h4>
                     <p>{item.publisher}</p>
                   </div>
+                  <button onClick={() => delItem(item)}>delete</button>
                 </li>
                 )
               }

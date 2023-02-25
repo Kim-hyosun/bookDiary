@@ -1,6 +1,12 @@
 
 function ListWanna() {
-  let WANNAlist = JSON.parse(localStorage.getItem("WANNAlist"))
+  let WANNAlist = JSON.parse(localStorage.getItem("WANNAlist"));
+
+  const delItem = (item) => {
+    let WANNAlist = JSON.parse(localStorage.getItem("WANNAlist")) || [];
+    WANNAlist = WANNAlist.filter(el => el.title !== item.title && el !== undefined && el !== null);
+    localStorage.setItem("WANNAlist", JSON.stringify(WANNAlist));
+  }
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>{
 
@@ -13,6 +19,7 @@ function ListWanna() {
                 <h4>{item.title}</h4>
                 <p>{item.publisher}</p>
               </div>
+              <button onClick={() => delItem(item)}>delete</button>
             </li>
             )
           }

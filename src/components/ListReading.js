@@ -1,6 +1,12 @@
 
 function ListReading() {
-  let READINGlist = JSON.parse(localStorage.getItem("READINGlist"))
+  let READINGlist = JSON.parse(localStorage.getItem("READINGlist"));
+
+  const delItem = (item) => {
+    let READINGlist = JSON.parse(localStorage.getItem("READINGlist")) || [];
+    READINGlist = READINGlist.filter(el => el.title !== item.title && el !== undefined && el !== null);
+    localStorage.setItem("READINGlist", JSON.stringify(READINGlist));
+  }
   return (
     <div style={{ minHeight: 'calc(100vh - 190px)' }}>
       {
@@ -13,6 +19,7 @@ function ListReading() {
                   <h4>{item.title}</h4>
                   <p>{item.publisher}</p>
                 </div>
+                <button onClick={() => delItem(item)}>delete</button>
               </li>
               )
             }

@@ -8,7 +8,6 @@ function QueryDetail() {
   const [thisbook, setThisbook] = useState([]);
 
   const { itemID } = useParams();
-  // console.log(itemID);
 
 
   useEffect(() => {
@@ -39,31 +38,29 @@ function QueryDetail() {
     }
 
   }
-  //  console.log(thisbook.title);
-  //  console.log(REDlist[0].title);
+
 
   const addREDlist = (thisbook) => {
     let REDlist = JSON.parse(localStorage.getItem("REDlist")) || [];
-    REDlist = REDlist.filter(el => el.title !== thisbook.title);
+    REDlist = REDlist.filter(el => el.title !== thisbook.title && el !== undefined && el !== null);
     REDlist.push(thisbook);
     localStorage.setItem("REDlist", JSON.stringify(REDlist));
   }
 
   const addREADINGlist = (thisbook) => {
     let READINGlist = JSON.parse(localStorage.getItem("READINGlist")) || [];
-    READINGlist = READINGlist.filter(el => el.title !== thisbook.title);
+    READINGlist = READINGlist.filter(el => el.title !== thisbook.title && el !== undefined && el !== null);
     READINGlist.push(thisbook);
     localStorage.setItem("READINGlist", JSON.stringify(READINGlist));
   }
 
   const addWANNAlist = (thisbook) => {
     let WANNAlist = JSON.parse(localStorage.getItem("WANNAlist")) || [];
-    WANNAlist = WANNAlist.filter(el => el.title !== thisbook.title);
+    WANNAlist = WANNAlist.filter(el => el.title !== thisbook.title && el !== undefined && el !== null);
     WANNAlist.push(thisbook);
     localStorage.setItem("WANNAlist", JSON.stringify(WANNAlist));
   }
 
-  // console.log(thisbook)
   return (
     <div className="detail" style={{ minHeight: `calc(100vh - 73px)` }}>
 
