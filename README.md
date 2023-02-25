@@ -4,7 +4,11 @@
 
 모바일 앱 [‘북적북적’](https://play.google.com/store/apps/details?id=com.studiobustle.bookjuk&hl=ko&gl=US&pli=1)의 책 검색, 상세페이지 구현과 검색한 책을 내 서재에 3가지 목록으로 저장하는 기능 구현
 
-최하단 사이트 바로가기 링크 있습니다!
+최하단 구현사이트 바로가기 링크 있습니다!
+
+<br />
+<br />
+<br />
 
 # 1.  목표
 
@@ -24,6 +28,9 @@
 > **2.   카카오 API를 이용하여 검색기능 구현과 상세페이지 출력하기**
 > 
 
+<br />
+<br />
+<br />
 # 2.  디렉토리 구조
 
 ---
@@ -35,7 +42,9 @@
 
 ### 세부 Component 구성
 <img width="213" alt="2_2" src="https://user-images.githubusercontent.com/113571272/221362689-8b0c12a6-0ea4-4b8e-a5fd-7273684f884c.png">
-
+<br />
+<br />
+<br />
 
 
 # 3.  사용 기술
@@ -46,6 +55,9 @@
 
 ### 👍 Used Tools :  GitHub / Visual Studio Code /  Figma
 
+<br />
+<br />
+<br />
 # 4.  페이지 구성
 
 ---
@@ -72,7 +84,9 @@
 <img width="378" alt="4_6" src="https://user-images.githubusercontent.com/113571272/221362776-af475724-94f9-4152-a982-df843805b274.png">
 
 
-
+<br />
+<br />
+<br />
 # 5.  문제 및 해결 과정
 
 ---
@@ -121,7 +135,9 @@ navLink를 이용해서 적용한 스타일이 link to를 ‘/’로 설정하�
 **⇒ 랜딩페이지에도 path에 ‘/book’설정하니 하위페이지에서 인식**
 
 </aside>
-
+<br />
+<br />
+<br />
 # 6.  개인 리뷰
 
 ---
@@ -142,7 +158,9 @@ navLink를 이용해서 적용한 스타일이 link to를 ‘/’로 설정하�
 내 서재에 3가지 목록으로 저장할 수 있기 때문에 나는 3가지 배열 안에 책정보를 객체형태로 저장시켰는데 객체끼리 동일 데이터인지 비교가 잘 안되었다. 그래서 배열함수를 있는대로 찾아봤고 다시 공부하고 배우는 계기가 되어 좋았다. 
 
 </aside>
-
+<br />
+<br />
+<br />
 # 사이트 바로가기
 
 [HS | 북적북적](https://kim-hyosun.github.io/bookDiary/#/book)
