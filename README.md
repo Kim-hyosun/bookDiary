@@ -52,13 +52,13 @@
 
 ## 홈 화면 -  검색 - 상세페이지로 이동 - 서재(3가지 리스트)에 나눠 저장가능
 
-홈화면
+홈화면<br/>
 <img width="610" alt="4_1" src="https://user-images.githubusercontent.com/113571272/221362705-24db9bb1-632a-4185-8774-b9b7609fd513.png">
 
-검색
+검색<br/>
 <img width="506" alt="4_2" src="https://user-images.githubusercontent.com/113571272/221362730-7d6f94d8-a741-474e-bd5c-bbb588e84409.png">
 
-상세페이지
+상세페이지<br/>
 <img width="374" alt="4_3" src="https://user-images.githubusercontent.com/113571272/221362740-e3f09d11-36e2-41a4-b851-6e37e9c4dafc.png">
 
 
