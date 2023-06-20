@@ -166,6 +166,6 @@ navLink를 이용해서 적용한 스타일이 link to를 ‘/’로 설정하�
 <br />
 <br />
 
-# 내가 작업한 사이트 바로가기
+# 작업한 사이트 바로가기
 
 # [HS | 북적북적](https://kim-hyosun.github.io/bookDiary/#/book)
