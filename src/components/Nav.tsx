@@ -1,8 +1,16 @@
-import { NavLink } from "../../node_modules/react-router-dom/dist/index";
-import "./style/nav.scss"
+import type { ReactElement } from "react";
+import { NavLink } from "react-router-dom";
+import "./style/nav.scss";
+
+interface NavItem {
+  id: number;
+  icon: ReactElement;
+  content: string;
+  url: string;
+}
 
 function Nav() {
-  const data = [
+  const data: NavItem[] = [
     {
       id: 1, icon:
         <svg viewBox="0 0 31 28" xmlns="http://www.w3.org/2000/svg">
@@ -26,18 +34,16 @@ function Nav() {
       id: 5, icon:
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M24 23.8q-3.45 0-5.625-2.175T16.2 16q0-3.45 2.175-5.625T24 8.2q3.45 0 5.625 2.175T31.8 16q0 3.45-2.175 5.625T24 23.8ZM7.7 40.45v-5q0-2 1-3.425 1-1.425 2.55-2.175 3.4-1.5 6.5-2.25t6.25-.75q3.15 0 6.225.775Q33.3 28.4 36.7 29.85q1.6.75 2.6 2.175 1 1.425 1 3.425v5Z" /></svg>, content: "프로필", url: 'yet3'
     },
-  ]
-
+  ];
 
   return (
     <nav>
       <ul>
-        {
-          data.map((item) => <li key={item.id}>
-            <NavLink to={item.url} activeclassname="active">{item.icon}<br /><span>{item.content}</span></NavLink>
+        {data.map((item) => (
+          <li key={item.id}>
+            <NavLink to={item.url} className={({ isActive }) => (isActive ? "active" : "")}>{item.icon}<br /><span>{item.content}</span></NavLink>
           </li>
-          )
-        }
+        ))}
       </ul>
     </nav>
   );
